@@ -1,4 +1,4 @@
-html,
+/* html, 
 body {
   --color-1: #283c86;
   --color-2: #45a247;
@@ -23,7 +23,6 @@ body {
   width: 400px;
   border-radius: 10px;
   text-align: center;
-  margin: 0 auto;
   background-color: aliceblue;
   box-shadow: -2px 6px 18px 3px rgba(0, 0, 0, 0.75);
   padding: 50px;
@@ -77,11 +76,11 @@ button:focus {
 #resetBtn {
   display: none;
 }
-
+*/
 .active {
   box-shadow: -2px 6px 18px 3px rgba(0, 0, 0, 0.75);
 }
-
+/*
 @media screen and (max-width: 376px) {
   .container {
     width: 80vw;
@@ -96,3 +95,5 @@ button:focus {
     font-size: 2rem;
   }
 }
+
+*/

@@ -4,30 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
     <title>Dice Game</title>
 </head>
-<body>
+
+<!-- run in terminal: npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch -->
+<body class="h-screen bg-gradient-to-r from-cyan-500 to-blue-500 font-sans
+            text-black flex items-center justify-center m-0 p-0">
     
-    <div class="container">
-        <h1 id="message">Player 1 Turn</h1>
-        <div class="players">
-            <div id="player1">
-                <h1>Score: 
+    <div class="w-4/5 h-2/4 rounded-xl bg-slate-50 p-12 shadow-xl shadow-black flex flex-col justify-center items-center
+                md:w-2/5 md:h-3/4 md:justify-evenly">
+        <h1 class="text-3xl mb-4 font-normal md:text-5xl" id="message">Player 1 Turn</h1>
+        <div class="w-full flex mt-0 mb-8 justify-between md:justify-around">
+            <div class="text-xl flex flex-col justify-center items-center font-normal md:text-3xl" id="player1">
+                <h1 class="mb-2 md:mb-4">Score: 
                     <span id="player1Scoreboard">0</span>
                 </h1>
-                <div id="player1Dice" class="dice active">-</div>
+                <div id="player1Dice" class="w-16 h-16 bg-blue-500 rounded-lg
+                    text-slate-50 text-4xl flex items-center justify-center active md:w-24 md:h-24
+                      lg:w-32 lg:h-32 md:text-7xl">-</div>
             </div>
-            <div id="player2">
-                <h1>Score: 
+            <div class="text-xl flex flex-col justify-center items-center font-normal md:text-3xl" id="player2">
+                <h1 class="mb-2 md:mb-4">Score: 
                     <span id="player2Scoreboard">0</span>
                 </h1>
-                <div id="player2Dice" class="dice">-</div>
+                <div id="player2Dice" class="w-16 h-16 bg-blue-500 rounded-lg
+                text-slate-50 text-4xl flex items-center justify-center md:w-24 md:h-24
+                  lg:w-32 lg:h-32 md:text-7xl">-</div>
             </div>
         </div>
 
-        <button id="rollBtn">Roll Dice 🎲</button>
-        <button id="resetBtn">Reset Game 🔁</button>
+        <button class="text-slate-50 py-3 px-5 bg-cyan-500 
+        text-xl rounded cursor-pointer lg:py-5 lg:px-7" id="rollBtn">Roll Dice 🎲</button>
+        <button class="text-slate-50 py-3 px-5 bg-cyan-500 
+        text-xl rounded cursor-pointer hidden lg:py-5 lg:px-7" id="resetBtn">Reset Game 🔁</button>
     </div>
 
 <script src="script.js"></script>
